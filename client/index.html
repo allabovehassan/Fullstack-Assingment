@@ -1,14 +1,118 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
-    link
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Product Registration</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
+    <div class="container">
+        <div class="left-panel">
+            <img src="./Designer.jpeg" alt="Prism Kettles and Toasters">
+            <p>The Prism range of kettles and toasters is made for those who don't settle for the ordinary.</p>
+        </div>
+
+
+        <div class="right-panel">
+            <form id="registrationForm">
+                <h2>Register your product</h2>
+                <label for="category">Category</label>
+                <select id="category" name="category">
+                    <option value="">Select Category</option>
+           
+                </select>
+
+                <label for="model">Model</label>
+                <select id="model" name="model">
+                    <option value="">Select Model</option>
+             
+                </select>
+
+                <label for="serialNumber">Serial Number</label>
+                <input type="text" id="serialNumber" name="serialNumber" required>
+
+                <label for="invoiceDate">Date of Invoice</label>
+                <input type="date" id="invoiceDate" name="invoiceDate" required>
+
+                <label for="uploadFile">Upload File</label>
+                <div id="dropZone">Drag files here or click to browse</div>
+                <input type="file" id="uploadFile" name="uploadFile" style="display: none;">
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 <link rel="stylesheet" href="style.css">
 <script src="./index.js"></script>
+<!-- </html>  -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Registration</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- <div class="left-panel">
+            <img src="./Designer.jpeg" alt="Prism Kettles and Toasters">
+            <p>The Prism range of kettles and toasters is made for those who don't settle for the ordinary.</p>
+        </div> -->
+         <!-- <div class="left-panel">
+            <img src="./Designer.jpeg" alt="Prism Kettles and Toasters" id="backgroundImage">
+            <div class="overlay">
+                <p>The Prism range of kettles and toasters is made for those who don't settle for the ordinary.</p>
+            </div>
+        </div> -->
+         <div class="left-panel">
+            <img src="./Designer.jpeg" alt="Prism Kettles and Toasters" id="backgroundImage">
+            <p class="overlay-text">The Prism range of kettles and toasters is made for those who don't settle for the ordinary.</p>
+        </div>
+        <div class="right-panel">
+            <form id="registrationForm">
+                <h2>Register your product</h2>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="category">Category</label>
+                        <select id="category" name="category">
+                            <option value="">Select Category</option>
+                            <!-- Add options here -->
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="model">Model</label>
+                        <select id="model" name="model">
+                            <option value="">Select Model</option>
+                            <!-- Add options here -->
+                        </select>
+                    </div>
+                </div>
+                <div id="for-row-1" class="form-row">
+                    <div class="form-group">
+                        <label for="serialNumber">Serial Number<span class="required">*</span></label>
+                        <input type="text" id="serialNumber" name="serialNumber" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="invoiceDate">Date of Invoice</label>
+                        <input type="date" id="invoiceDate" name="invoiceDate" required>
+                    </div>
+                </div>
+                <div id  = "form-group-1" class="form-group">
+                    <label for="uploadFile">Upload File</label>
+                    <div id="dropZone">Drag files or <span>browse</span></div>
+                    <input type="file" id="uploadFile" name="uploadFile" style="display: none;">
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
 </html>
+
