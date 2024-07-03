@@ -2,21 +2,25 @@ const mongoose = require("mongoose");
 
 const productSchema = mongoose.Schema(
   {
-    task: {
+    category: {
       type: String,
       required: true,
     },
-    dueDate: {
+    dateOfInvoice: {
       type: Date,
-      required: false,
+      required: true,
     },
-    priority: {
+    serialNumber: {
       type: String,
-      required: false,
+      required: true,
     },
-    isCompleted: {
+    model: {
       type: String,
       require: true,
+    },
+    fileName: {
+      type: String,
+      require: false,
     },
     status: {
       type: Boolean,

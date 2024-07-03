@@ -1,263 +1,162 @@
-/* body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-}
-
-.container {
-    display: flex;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-.left-panel {
-    background-color: #000;
-    color: #fff;
-    padding: 20px;
-    width: 300px;
-    text-align: center;
-}
-
-.left-panel img {
-    width: 100%;
-}
-
-.right-panel {
-    padding: 20px;
-    background-color: #fff;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-form label {
-    margin-top: 10px;
-}
-
-form input, form select, form button {
-    margin-top: 5px;
-}
-
-#dropZone {
-    border: 2px dashed #ccc;
-    padding: 20px;
-    text-align: center;
-    cursor: pointer;
-}
-
-#dropZone.dragover {
-    background-color: #f0f0f0;
-}
-
-form button {
-    background-color: red;
-    color: #fff;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    margin-top: 15px;
-}
-
-form button:hover {
-    background-color: darkred;
-}
-
-
- */
-/* ---------------- */
-
 body {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+    "Helvetica Neue", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
 }
 
 .container {
-    display: flex;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    width: 70%;
+  display: flex;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 70%;
 }
-
-/* .left-panel {
-    background-color: #000;
-    color: #fff;
-    padding: 20px;
-    width: 300px;
-    text-align: center;
-}
-
-.left-panel img {
-    width: 100%;
-} */
 
 .left-panel {
-    position: relative;
-    width: 40%;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
+  position: relative;
+  width: 40%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
 }
 
 .left-panel img {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
 .overlay-text {
-    position: absolute;
-    bottom: 80px;
-    width: 50%;
-    text-align: center;
-    color: #fff;
-    margin: 0;
-    padding: 10px;
-    background: none;
+  position: absolute;
+  bottom: 80px;
+  width: 50%;
+  text-align: center;
+  color: #fff;
+  margin: 0;
+  padding: 10px;
+  background: none;
 }
 
 .right-panel {
-    padding: 20px;
-    background-color: #fff;
-    display: flex;
-    justify-content: center;
-    /* margin: auto; */
-    flex: 1;
+  padding: 20px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  flex: 1;
 }
 
 form {
-    display: flex;
-    flex-direction: column;
-    width: 85%;
-    height: 95%;
-    /* justify-content: center; */
-    /* align-items: center; */
-    margin: auto;
-    /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+  height: 95%;
+  margin: auto;
 }
 
 form h2 {
-    margin-bottom: 20px;
-    font-weight:normal;
-    font-size: 30px;
-    color: black;
+  margin-bottom: 20px;
+  font-weight: normal;
+  font-size: 30px;
+  color: black;
 }
 
-#serialNumber{
-    height: 40px;
+#serialNumber {
+  height: 40px;
 }
-#invoiceDate{
-    height: 40px;
-    color: darkslategrey;
+#invoiceDate {
+  height: 40px;
+  color: darkslategrey;
 }
-#category{
-    height: 40px;
-    color: darkslategrey;
+#category {
+  height: 40px;
+  color: darkslategrey;
 }
-#model{
-    height: 40px;
-    color: darkslategrey;
+#model {
+  height: 40px;
+  color: darkslategrey;
 }
 
 .form-row {
-    /* border: 20px green; */
-    display: flex;
-    margin-top: 5px;
-    flex-wrap: wrap;
-    gap: 50px;
+  display: flex;
+  margin-top: 5px;
+  flex-wrap: wrap;
+  gap: 50px;
 }
 
 .form-group {
-    /* margin-top: 20px; */
-    flex: 1;
-    display: flex;
-    flex-direction: column;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
-.form-group label{
-    color: black;
-    font-size: 13px;
-    font-weight: bold;
-}
-
-#form-group-1{
-    height: 20px;
-    /* padding-bottom: 150px; */
-    /* border: 1px solid green; */
-    /* padding-top: 25px; */
-    
+.form-group label {
+  color: black;
+  font-size: 13px;
+  font-weight: bold;
 }
 
-/* .form-group>label{
-    margin-top: 50px;
-} */
+#form-group-1 {
+  height: 20px;
+}
 
 form label {
-    margin-top: 40px;
+  margin-top: 40px;
 }
-form input, form select{
-    width: 70%;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+form input,
+form select {
+  width: 85%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
-
-form input, form select, form button {
-    margin-top: 5px;
+form input,
+form select,
+form button {
+  margin-top: 5px;
 }
 .required {
-    color: red;
+  color: red;
 }
 
-/* #form-row-1{
-    border: 1px solid black;
-} */
-
 #dropZone {
-    margin-top: 2%;
-    display: flex;
-    border: 2px dashed #ccc;
-    /* padding: 20px; */
-    justify-content: center;    
-    align-items: center;
-    cursor: pointer;
-    height: 30%;
-    width: 86%;
+  margin-top: 2%;
+  display: flex;
+  border: 2px dashed #ccc;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  height: 30%;
+  width: 92.8%;
 }
 
 #dropZone.dragover {
-    background-color: #f0f0f0;
+  background-color: #f0f0f0;
 }
 
 #dropZone span {
-    color: red;
-    margin-left: 5px; /* Red color for the "click to browse" text */
+  color: red;
+  margin-left: 5px;
 }
 
 form button {
-    background-color: red;
-    color: #fff;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    margin-top: 45px;
-    width: 30%;
-    height: 11%;
-    border-radius:30px;
+  background-color: rgb(227, 0, 0);
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  margin-top: 45px;
+  width: 35%;
+  height: 11%;
+  border-radius: 30px;
 }
 
 form button:hover {
-    background-color: darkred;
-
+  background-color: darkred;
 }
 
 @media (max-width: 768px) {
-    .form-row {
-        flex-direction: column;
-    }
+  .form-row {
+    flex-direction: column;
+  }
 }

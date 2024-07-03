@@ -1,5 +1,6 @@
+const baseURL = "http://localhost:9090";
 
-document.getElementById("registrationForm").addEventListener("submit", function (event) {
+document.getElementById("button").addEventListener("click", async function (event) {
   event.preventDefault();
 
   const category = document.getElementById("category").value;
@@ -13,24 +14,31 @@ document.getElementById("registrationForm").addEventListener("submit", function 
     return;
   }
 
+  const formattedDate = moment(invoiceDate).format("YYYY-MM-DD");
   const formData = new FormData();
   formData.append("category", category);
   formData.append("model", model);
   formData.append("serialNumber", serialNumber);
-  formData.append("invoiceDate", invoiceDate);
+  formData.append("dateOfInvoice", formattedDate);
   formData.append("uploadFile", uploadFile);
 
-  fetch("/api/register", {
-    method: "POST",
-    body: formData,
-  })
-    .then((response) => response.json())
-    .then((data) => {
-      alert("Product registered successfully!");
-    })
-    .catch((error) => {
-      console.error("Error:", error);
+  try {
+    let response = await fetch(`${baseURL}/product/create`, {
+      method: "POST",
+      body: formData,
     });
+    console.log(response);
+
+    if (response.ok) {
+      let message = await response.json();
+      alert(JSON.stringify(message.message, null, 2));
+    } else {
+      let message = await response.json();
+      alert(JSON.stringify(message.message, null, 2));
+    }
+  } catch (error) {
+    console.error("Fetch error:", error);
+  }
 });
 
 const dropZone = document.getElementById("dropZone");

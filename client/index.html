@@ -1,118 +1,84 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Registration</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div class="container">
-        <div class="left-panel">
-            <img src="./Designer.jpeg" alt="Prism Kettles and Toasters">
-            <p>The Prism range of kettles and toasters is made for those who don't settle for the ordinary.</p>
-        </div>
-
-
-        <div class="right-panel">
-            <form id="registrationForm">
-                <h2>Register your product</h2>
-                <label for="category">Category</label>
-                <select id="category" name="category">
-                    <option value="">Select Category</option>
-           
-                </select>
-
-                <label for="model">Model</label>
-                <select id="model" name="model">
-                    <option value="">Select Model</option>
-             
-                </select>
-
-                <label for="serialNumber">Serial Number</label>
-                <input type="text" id="serialNumber" name="serialNumber" required>
-
-                <label for="invoiceDate">Date of Invoice</label>
-                <input type="date" id="invoiceDate" name="invoiceDate" required>
-
-                <label for="uploadFile">Upload File</label>
-                <div id="dropZone">Drag files here or click to browse</div>
-                <input type="file" id="uploadFile" name="uploadFile" style="display: none;">
-
-                <button type="submit">Submit</button>
-            </form>
-        </div>
-    </div>
-    <script src="script.js"></script>
-</body>
-<link rel="stylesheet" href="style.css">
-<script src="./index.js"></script>
-<!-- </html>  -->
-
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Product Registration</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <div class="container">
-        <!-- <div class="left-panel">
-            <img src="./Designer.jpeg" alt="Prism Kettles and Toasters">
-            <p>The Prism range of kettles and toasters is made for those who don't settle for the ordinary.</p>
-        </div> -->
-         <!-- <div class="left-panel">
-            <img src="./Designer.jpeg" alt="Prism Kettles and Toasters" id="backgroundImage">
-            <div class="overlay">
-                <p>The Prism range of kettles and toasters is made for those who don't settle for the ordinary.</p>
+      <div class="left-panel">
+        <img src="./Designer.jpeg" alt="Prism Kettles and Toasters" id="backgroundImage" />
+        <p class="overlay-text">
+          The Prism range of kettles and toasters is made for those who don't settle for the ordinary.
+        </p>
+      </div>
+      <div class="right-panel">
+        <form id="registrationForm">
+          <h2>Register your product</h2>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="category">Category</label>
+              <select id="category" name="category">
+                <option value="" selected disabled>Select Category</option>
+                <option value="kettles">Kettles</option>
+                <option value="toasters">Toasters</option>
+                <option value="blenders">Blenders</option>
+                <option value="microwaves">Microwaves</option>
+                <option value="coffeeMakers">Coffee Makers</option>
+                <option value="ovens">Ovens</option>
+                <option value="dishwashers">Dishwashers</option>
+                <option value="refrigerators">Refrigerators</option>
+                <option value="freezers">Freezers</option>
+                <option value="airConditioners">Air Conditioners</option>
+                <option value="heaters">Heaters</option>
+                <option value="washingMachines">Washing Machines</option>
+                <option value="dryers">Dryers</option>
+                <option value="vacuumCleaners">Vacuum Cleaners</option>
+              </select>
             </div>
-        </div> -->
-         <div class="left-panel">
-            <img src="./Designer.jpeg" alt="Prism Kettles and Toasters" id="backgroundImage">
-            <p class="overlay-text">The Prism range of kettles and toasters is made for those who don't settle for the ordinary.</p>
-        </div>
-        <div class="right-panel">
-            <form id="registrationForm">
-                <h2>Register your product</h2>
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="category">Category</label>
-                        <select id="category" name="category">
-                            <option value="">Select Category</option>
-                            <!-- Add options here -->
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="model">Model</label>
-                        <select id="model" name="model">
-                            <option value="">Select Model</option>
-                            <!-- Add options here -->
-                        </select>
-                    </div>
-                </div>
-                <div id="for-row-1" class="form-row">
-                    <div class="form-group">
-                        <label for="serialNumber">Serial Number<span class="required">*</span></label>
-                        <input type="text" id="serialNumber" name="serialNumber" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="invoiceDate">Date of Invoice</label>
-                        <input type="date" id="invoiceDate" name="invoiceDate" required>
-                    </div>
-                </div>
-                <div id  = "form-group-1" class="form-group">
-                    <label for="uploadFile">Upload File</label>
-                    <div id="dropZone">Drag files or <span>browse</span></div>
-                    <input type="file" id="uploadFile" name="uploadFile" style="display: none;">
-                    <button type="submit">Submit</button>
-                </div>
-            </form>
-        </div>
+            <div class="form-group">
+              <label for="model">Model</label>
+              <select id="model" name="model">
+                <option value="" select disabled>Select Model</option>
+                <option value="prismKettle">Prism Kettle</option>
+                <option value="prismToaster">Prism Toaster</option>
+                <option value="prismBlender">Prism Blender</option>
+                <option value="prismMicrowave">Prism Microwave</option>
+                <option value="prismCoffeeMaker">Prism Coffee Maker</option>
+                <option value="prismOven">Prism Oven</option>
+                <option value="prismDishwasher">Prism Dishwasher</option>
+                <option value="prismRefrigerator">Prism Refrigerator</option>
+                <option value="prismFreezer">Prism Freezer</option>
+                <option value="prismAirConditioner">Prism Air Conditioner</option>
+                <option value="prismHeater">Prism Heater</option>
+                <option value="prismWashingMachine">Prism Washing Machine</option>
+                <option value="prismDryer">Prism Dryer</option>
+                <option value="prismVacuumCleaner">Prism Vacuum Cleaner</option>
+              </select>
+            </div>
+          </div>
+          <div id="for-row-1" class="form-row">
+            <div class="form-group">
+              <label for="serialNumber">Serial Number<span class="required">*</span></label>
+              <input type="text" id="serialNumber" name="serialNumber" required />
+            </div>
+            <div class="form-group">
+              <label for="invoiceDate">Date of Invoice</label>
+              <input type="date" id="invoiceDate" name="invoiceDate" required />
+            </div>
+          </div>
+          <div id="form-group-1" class="form-group">
+            <label for="uploadFile">Upload File</label>
+            <div id="dropZone">Drag files or <span>browse</span></div>
+            <input type="file" id="uploadFile" name="uploadFile" style="display: none" />
+            <button id="button" type="submit">Submit</button>
+          </div>
+        </form>
+      </div>
     </div>
-    <script src="script.js"></script>
-</body>
+  </body>
+  <script src="index.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
 </html>
-
